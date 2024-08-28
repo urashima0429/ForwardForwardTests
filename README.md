@@ -7,7 +7,7 @@ docker build -t ff-algorithm-env:latest .
 
 ## Dockerコンテナの起動
 ```bash
-docker run -it -p 8888:8888 ff-algorithm-env:latest
+docker run -it --gpus all -p 8888:8888 -v ${PWD}/data:/app ff-algorithm-env:latest
 ```
 
 ## Jupyter Notebookの起動
